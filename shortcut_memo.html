@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSCode 단축어 메모</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px 20px 20px 220px; /* Adjusted margin to make space for the nav */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px; /* Increased margin-bottom */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            margin-top: 60px; /* Increased margin-top */
+        }
+        #darkModeToggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        nav {
+            position: fixed;
+            left: 10px;
+            top: 50px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 150px; /* Adjusted width */
+            cursor: move; /* Change cursor to move */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #007acc;
+        }
+        .transition {
+            transition: background-color 0.5s, color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <button id="darkModeToggle">다크 모드</button>
+    <h1>VSCode 단축어 메모</h1>
+
+    <h2 id="파일 관리">파일 관리</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>기능</th>
+                <th>단축어</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>파일 열기</td>
+                <td>Ctrl + O</td>
+            </tr>
+            <tr>
+                <td>파일 저장</td>
+                <td>Ctrl + S</td>
+            </tr>
+            <tr>
+                <td>모든 파일 저장</td>
+                <td>Ctrl + K, S</td>
+            </tr>
+            <tr>
+                <td>파일 닫기</td>
+                <td>Ctrl + W</td>
+            </tr>
+            <tr>
+                <td>새 파일 만들기</td>
+                <td>Ctrl + N</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="편집">편집</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>기능</th>
+                <th>단축어</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>찾기</td>
+                <td>Ctrl + F</td>
+            </tr>
+            <tr>
+                <td>바꾸기</td>
+                <td>Ctrl + H</td>
+            </tr>
+            <tr>
+                <td>주석 처리</td>
+                <td>Ctrl + /</td>
+            </tr>
+            <tr>
+                <td>코드 포맷</td>
+                <td>Shift + Alt + F</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="탐색">탐색</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>기능</th>
+                <th>단축어</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>파일 탐색기 열기/닫기</td>
+                <td>Ctrl + B</td>
+            </tr>
+            <tr>
+                <td>사이드바 열기/닫기</td>
+                <td>Ctrl + Shift + E</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="명령 및 터미널">명령 및 터미널</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>기능</th>
+                <th>단축어</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>명령 팔레트 열기</td>
+                <td>Ctrl + Shift + P</td>
+            </tr>
+            <tr>
+                <td>터미널 열기/닫기</td>
+                <td>Ctrl + `</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="디버깅">디버깅</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>기능</th>
+                <th>단축어</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>디버그 시작/중지</td>
+                <td>F5 / Shift + F5</td>
+            </tr>
+            <tr>
+                <td>디버그 다음 단계</td>
+                <td>F10</td>
+            </tr>
+            <tr>
+                <td>디버그 진입</td>
+                <td>F11</td>
+            </tr>
+            <tr>
+                <td>디버그 나가기</td>
+                <td>Shift + F11</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .dark-mode {
+                background-color: #121212;
+                color: #ffffff;
+            }
+            .dark-mode table {
+                border-color: #333333;
+            }
+            .dark-mode th {
+                background-color: #333333;
+            }
+            .dark-mode td {
+                border-color: #333333;
+            }
+            .dark-mode nav {
+                background-color: #333333;
+                color: #ffffff;
+                border-color: #444444;
+            }
+            .dark-mode nav ul li a {
+                color: #ffffff;
+            }
+            .dark-mode nav ul li a:hover {
+                color: #007acc;
+            }
+        `;
+        document.head.appendChild(style);
+
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Make the nav draggable
+        const nav = document.querySelector('nav');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        nav.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - nav.offsetLeft;
+            offsetY = e.clientY - nav.offsetTop;
+            nav.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                nav.style.left = `${e.clientX - offsetX}px`;
+                nav.style.top = `${e.clientY - offsetY}px`;
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            nav.style.cursor = 'move';
+        });
+    </script>
+    <footer>
+        <p>&copy; copyright by JunseungKim & GitHub Copilot</p>
+    </footer>
+</body>
+</html>
+<nav>
+    <ul>
+        <li><a href="#파일 관리">파일 관리</a></li>
+        <li><a href="#편집">편집</a></li>
+        <li><a href="#탐색">탐색</a></li>
+        <li><a href="#명령 및 터미널">명령 및 터미널</a></li>
+        <li><a href="#디버깅">디버깅</a></li>
+    </ul>
+</nav>
