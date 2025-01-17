@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git 명령어 시트</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            /* 어두운 색상 */
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            table-layout: fixed;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #333;
+            /* 어두운 색상 */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        td:first-child {
+            cursor: pointer;
+            color: #333;
+            /* 어두운 색상 */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            /* 어두운 색상 */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Git 명령어 시트</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>명령어</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>git init</td>
+                <td>새 Git 저장소 초기화</td>
+            </tr>
+            <tr>
+                <td>git clone &lt;repository&gt;</td>
+                <td>기존 저장소 복제</td>
+            </tr>
+            <tr>
+                <td>git status</td>
+                <td>작업 디렉토리 상태 표시</td>
+            </tr>
+            <tr>
+                <td>git add &lt;file&gt;</td>
+                <td>파일을 스테이징 영역에 추가</td>
+            </tr>
+            <tr>
+                <td>git commit -m "메시지"</td>
+                <td>메시지와 함께 변경 사항 커밋</td>
+            </tr>
+            <tr>
+                <td>git push</td>
+                <td>원격 저장소에 변경 사항 푸시</td>
+            </tr>
+            <tr>
+                <td>git pull</td>
+                <td>원격 저장소에서 변경 사항 가져와 병합</td>
+            </tr>
+            <tr>
+                <td>git branch</td>
+                <td>브랜치 목록, 생성 또는 삭제</td>
+            </tr>
+            <tr>
+                <td>git checkout &lt;branch&gt;</td>
+                <td>다른 브랜치로 전환</td>
+            </tr>
+            <tr>
+                <td>git merge &lt;branch&gt;</td>
+                <td>현재 브랜치에 다른 브랜치 병합</td>
+            </tr>
+            <tr>
+                <td>git log</td>
+                <td>커밋 기록 표시</td>
+            </tr>
+            <tr>
+                <td>git remote -v</td>
+                <td>원격 저장소 표시</td>
+            </tr>
+            <tr>
+                <td>git fetch</td>
+                <td>다른 저장소에서 객체와 참조 다운로드</td>
+            </tr>
+            <tr>
+                <td>git reset &lt;file&gt;</td>
+                <td>파일 스테이징 취소</td>
+            </tr>
+            <tr>
+                <td>git rm &lt;file&gt;</td>
+                <td>작업 디렉토리와 스테이징 영역에서 파일 제거</td>
+            </tr>
+            <tr>
+                <td>git revert &lt;commit&gt;</td>
+                <td>지정된 커밋의 변경 사항 되돌리기</td>
+            </tr>
+            <tr>
+                <td>git reset --hard &lt;commit&gt;</td>
+                <td>지정된 커밋으로 되돌리고 이후의 변경 사항 삭제</td>
+            </tr>
+            <tr>
+                <td>git restore &lt;file&gt;</td>
+                <td>작업 디렉토리에서 파일 복원</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const commands = document.querySelectorAll('td:first-child');
+        commands.forEach(command => {
+            command.addEventListener('click', () => {
+                const description = command.nextElementSibling.textContent;
+                const utterance = new SpeechSynthesisUtterance(description);
+                speechSynthesis.speak(utterance);
+            });
+        });
+    </script>
+</body>
+
+</html>
