@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scriptfile.js"></script>
+</head>
+
+<body>
+    <h1>Calendar App</h1>
+    <button id="toggleDarkMode">Toggle Dark Mode</button>
+    <div class="calendar" id="calendar"></div>
+    <div class="event-form">
+        <h2>Add Event</h2>
+        <form id="eventForm">
+            <label for="eventDate">Date:</label>
+            <input type="date" id="eventDate" required>
+            <br>
+            <label for="eventDescription">Event:</label>
+            <input type="text" id="eventDescription" required>
+            <br>
+            <button type="submit">Add Event</button>
+        </form>
+    </div>
+    <div class="events" id="events"></div>
+
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/@chatscope/chat-ui-kit-styles/dist/default/styles.min.css"></script>
+<script src="https://cdn.jsdelivr.net/npm/@chatscope/chat-ui-kit-react/dist/index.js"></script>
+<div id="chat-container" style="max-width: 600px; margin: 20px auto;"></div>
